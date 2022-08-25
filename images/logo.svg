@@ -1,0 +1,19 @@
+<svg width="412" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 100" style="user-select: none;">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="5%" style="stop-color:#4444ee;" />
+            <stop offset="95%" style="stop-color:#ddd;" />
+        </linearGradient>
+    </defs>
+
+    <g>
+        <title>Panel Logo</title>
+        <g id="logo-svg">
+            <text class="logo-font" xml:space="preserve" text-anchor="start" font-family="'Cabin', sans-serif" font-size="72" id="svg_3" y="69.50011" x="4.33063" stroke-width="0" stroke="#000" fill="#4444ee" font-style="italic">wiyt</text>
+            <text class="logo-font" xml:space="preserve" text-anchor="start" font-family="'Cabin', sans-serif" font-size="72" id="svg_4" y="69.50011" x="231.39342" stroke-width="0" stroke="#000" fill="#ddd" font-style="italic">space</text>
+        </g>
+        <path fill="#4444ee" stroke="#000" stroke-width="0" opacity="NaN" d="m51.00001,85.24999" id="logo-svg"/>
+        <rect rx="1" stroke-width="0" id="rect1" height="5" width="224" y="17.98" x="180.875" stroke="#000" fill="url(#gradient)"/>
+        <rect rx="1" stroke-width="0" id="rect2" height="5" width="224" y="78.8" x="14" stroke="#000" fill="url(#gradient)"/>
+    </g>
+</svg>

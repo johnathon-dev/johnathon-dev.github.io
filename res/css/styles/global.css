@@ -1,0 +1,81 @@
+:root {
+    --header-height: 77px;
+    --header-background: rgba(0, 0, 0, 0.5);
+    --main-background: #222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-background);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--header-background);
+    color: white;
+    font-family: Cabin, sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    position: sticky;
+    z-index: 1;
+    height: var(--header-height);
+}
+
+main {
+    background-color: var(--main-background);
+    color: white;
+    padding: 48px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: var(--header-height);
+}
+
+section p {
+    text-align: center;
+}
+
+.scrolling {
+    height: auto;
+    overflow: visible;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#ws-cover {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    cursor: pointer;
+    font-family: Cabin, sans-serif;
+    height: 100%;
+    position: absolute;
+    transition: visibility 0.5s, opacity 0.5s linear;
+    width: 100%;
+    z-index: 2;
+}
+
+#ws-cover div {
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+}

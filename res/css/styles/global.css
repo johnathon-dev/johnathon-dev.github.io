@@ -1,7 +1,22 @@
 :root {
+    --header-layer: 1;
+    --cover-layer: 2;
     --header-height: 77px;
-    --header-background: rgba(0, 0, 0, 0.5);
-    --main-background: #222;
+    --menu-width: 33.33333%;
+
+    --header-background: rgba(0, 0, 0, 0.2);
+    --cover-background: rgba(255, 255, 255, 0.9);
+    --dark-header-background: rgba(255, 255, 255, 0.2);
+    --dark-cover-background: rgba(0, 0, 0, 0.9);
+
+    --background: white;
+    --dark-background: black;
+
+    --text-color: black;
+    --dark-text-color: white;
+
+    --svg: black;
+    --dark-svg: white;
 }
 
 * {
@@ -10,31 +25,72 @@
 }
 
 body {
-    background-color: var(--main-background);
+    background-color: var(--background);
+    color: var(--text-color);
+    overflow: hidden;
+    transition: background-color 1.0s ease, color 1.0s ease;
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
+}
+
+g {
+    transition: transform 0.5s, opacity 0.5s linear;
+    transform-origin: -17% 50%;
+}
+
+ol {
+    font-family: Cabin, sans-serif;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    padding: 2em 0;
     overflow: hidden;
 }
 
+li a {
+    text-decoration: none;
+}
+
 header {
-    background-color: var(--header-background);
-    color: white;
+    backdrop-filter: blur(12px);
+    color: var(--text-color);
     font-family: Cabin, sans-serif;
     font-size: 24px;
     margin: 0 auto;
-    padding: 24px;
     text-align: center;
     position: sticky;
-    z-index: 1;
+    z-index: var(--header-layer);
     height: var(--header-height);
+    transition: background-color 0.5s linear, color 1.0s ease;
+    background-color: var(--header-background);
+}
+
+header.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-header-background);
 }
 
 main {
-    background-color: var(--main-background);
-    color: white;
     padding: 48px 0;
     position: absolute;
     top: 0;
     width: 100%;
     margin-top: var(--header-height);
+}
+
+svg.svg, path.path {
+    fill: var(--svg);
+    transition: fill 1.0s ease;
+}
+
+svg.svg.dark, path.path.dark {
+    fill: var(--dark-svg);
 }
 
 section p {
@@ -47,6 +103,7 @@ section p {
 }
 
 .sticky {
+    background-color: var(--header-background);
     position: fixed;
     top: 0;
     width: 100%;
@@ -54,28 +111,85 @@ section p {
 
 .unselectable {
     -moz-user-select: none;
-    -khtml-user-select: none;
     -webkit-user-select: none;
-    -o-user-select: none;
     user-select: none;
+}
+
+.ws-title {
+    margin: auto;
+    width: 100%;
+    height: var(--header-height);
+    text-align: center;
+    padding-top: 20px;
 }
 
 #ws-cover {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    background-color: var(--cover-background);
+    color: var(--text-color);
     cursor: pointer;
     font-family: Cabin, sans-serif;
     height: 100%;
     position: absolute;
     transition: visibility 0.5s, opacity 0.5s linear;
     width: 100%;
-    z-index: 2;
+    z-index: var(--cover-layer);
+}
+
+#ws-cover.dark {
+    background-color: var(--dark-cover-background);
+    color: var(--dark-text-color);
 }
 
 #ws-cover div {
     text-align: center;
     font-size: 40px;
+    margin: auto;
+}
+
+#ws-hamburger {
+    width: 99px;
+    height: var(--header-height);
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+#ws-dark-mode {
+    width: 50px;
+    height: var(--header-height);
+    right: 0;
+    top: 0;
+    position: absolute;
+    cursor: pointer;
+    margin-right: 24px;
+    display: flex;
+    justify-items: center;
+}
+
+#ws-menu {
+    transition: visibility 0.5s linear, opacity 0.5s linear, background-color 1.0s ease, left 1.0s ease;
+    background-color: var(--header-background);
+    color: var(--text-color);
+    position: fixed;
+    width: var(--menu-width);
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    top: var(--header-height);
+    z-index: var(--header-layer);
+    left: calc(var(--menu-width) * -1);
+}
+
+#ws-menu.dark {
+    background-color: var(--dark-header-background);
+    color: var(--dark-text-color);
+}
+
+#ws-menu p, #ws-menu a {
+    text-align: center;
     margin: auto;
 }

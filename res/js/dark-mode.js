@@ -1,21 +1,12 @@
-let dark = false;
+let mode = sessionStorage.getItem("darkmode");
 document.getElementById('ws-dark-mode').addEventListener("click", clicked);
 
 function clicked() {
-    if(dark) {
-        document.getElementById('ws-header').classList.remove('dark');
-        document.getElementById('ws-menu').classList.remove('dark');
-        document.getElementById('ws-cover').classList.remove('dark');
-        document.body.classList.remove('dark');
-        document.querySelector(".svg").classList.remove('dark');
-        document.querySelector(".path").classList.remove('dark');
-    } else {
-        document.getElementById('ws-header').classList.add('dark');
-        document.getElementById('ws-menu').classList.add('dark');
-        document.getElementById('ws-cover').classList.add('dark');
-        document.body.classList.add('dark');
-        document.querySelector(".svg").classList.add('dark');
-        document.querySelector(".path").classList.add('dark');
-    }
-    dark =! dark;
+    document.body.classList.toggle('dark');
+    sessionStorage.setItem("darkmode", document.body.classList.contains('dark').toString());
 }
+
+if(mode === 'true') document.body.classList.add('dark');
+window.onload = function() {
+    document.body.classList.remove('pre');
+};

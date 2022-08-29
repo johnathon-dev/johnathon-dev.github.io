@@ -6,6 +6,7 @@
     --menu-width: 33.33333%;
     --resume-left: 65%;
     --resume-right: 35%;
+    --link-color: #2079c7;
 
     --header-background: rgba(255, 255, 255, 0.7);
     --dark-header-background: rgba(0, 0, 0, 0.7);
@@ -29,9 +30,9 @@
 }
 
 body {
+    height: auto;
     background-color: var(--background);
     color: var(--text-color);
-    overflow: hidden;
     transition: background-color 1.0s ease, color 1.0s ease;
 }
 
@@ -172,11 +173,6 @@ p.date {
     margin-bottom: 0.5em;
 }
 
-.scrolling {
-    height: auto;
-    overflow: visible;
-}
-
 .sticky {
     background-color: var(--header-background);
     position: fixed;
@@ -248,7 +244,7 @@ h1.name {
 
 h1.blue-title {
     text-transform: uppercase;
-    color: #2079c7;
+    color: var(--link-color);
     font-weight: bolder;
     margin: 2em 0 1em 0;
 }
@@ -340,6 +336,10 @@ span.ws-title {
 #ws-menu p, #ws-menu a {
     text-align: center;
     margin: auto;
+}
+
+a:link {
+    color: var(--link-color);
 }
 
 @media only screen and (max-width: 500px) {

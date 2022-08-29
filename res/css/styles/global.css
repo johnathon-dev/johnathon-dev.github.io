@@ -199,7 +199,6 @@ p.date {
 }
 
 .resume {
-    width: 1000px;
     margin: auto;
 }
 
@@ -213,6 +212,7 @@ p.date {
     float: right;
     width: var(--resume-right);
     padding: 1em;
+    display: block;
 }
 
 .right:nth-child(2) {
@@ -344,5 +344,14 @@ span.ws-title {
 @media only screen and (max-width: 500px) {
     span.ws-title {
         display: none;
+    }
+    p, li, span, h2.title {
+        font-size: 3.2vw;
+    }
+    h1.blue-title {
+        font-size: 3.75vw;
+    }
+    h1.name {
+        font-size: 8vw;
     }
 }

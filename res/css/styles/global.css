@@ -349,6 +349,9 @@ span.ws-title {
     p, li, span, h2.title {
         font-size: 3.2vw;
     }
+    p.date {
+        font-size: 2.4vw;
+    }
     h1.blue-title {
         font-size: 3.75vw;
     }

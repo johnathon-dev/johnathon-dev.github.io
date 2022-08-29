@@ -338,7 +338,7 @@ span.ws-title {
     margin: auto;
 }
 
-a:link {
+main a:link {
     color: var(--link-color);
 }
 

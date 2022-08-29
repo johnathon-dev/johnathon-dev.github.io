@@ -7,8 +7,8 @@
     --resume-left: 65%;
     --resume-right: 35%;
 
-    --header-background: rgba(255, 255, 255, 0.4);
-    --dark-header-background: rgba(0, 0, 0, 0.4);
+    --header-background: rgba(255, 255, 255, 0.7);
+    --dark-header-background: rgba(0, 0, 0, 0.7);
 
     --cover-background: rgba(255, 255, 255, 0.9);
     --dark-cover-background: rgba(0, 0, 0, 0.9);

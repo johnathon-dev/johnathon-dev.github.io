@@ -6,6 +6,7 @@
     --menu-width: 33.33333%;
     --resume-left: 65%;
     --resume-right: 35%;
+
     --link-color: #2079c7;
 
     --header-background: rgba(255, 255, 255, 0.7);
@@ -338,7 +339,7 @@ span.ws-title {
     margin: auto;
 }
 
-main a:link {
+main a:link, main a:visited {
     color: var(--link-color);
 }
 

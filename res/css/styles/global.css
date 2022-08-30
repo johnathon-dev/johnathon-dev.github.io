@@ -248,7 +248,6 @@ span.bold {
 
 #email {
     word-break: break-all;
-    min-width: 100px;
 }
 
 #email.unloaded {

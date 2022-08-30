@@ -195,6 +195,18 @@ p.date {
     transition: none !important;
 }
 
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.0s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 .resume {
     margin: auto;
     max-width: 1000px;
@@ -227,6 +239,15 @@ p.description {
 
 span.bold {
     font-weight: bold;
+}
+
+#scroll {
+    transition: opacity 2.0s ease, margin-top 2.0s ease;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 64px;
+    opacity: 0.5;
 }
 
 #email.unloaded {

@@ -79,7 +79,6 @@ li:hover {
 ol li a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color 1.0s ease;
     font-size: 20px;
 }
 
@@ -196,7 +195,7 @@ p.date {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: all 1.0s ease;
+    transition: transform 1.0s ease, opacity 1.0s ease;
 }
 
 .reveal.active {

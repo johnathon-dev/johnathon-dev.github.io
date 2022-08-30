@@ -4,8 +4,8 @@
     --cover-layer: 2;
     --header-height: 77px;
     --menu-width: 33.33333%;
-    --resume-left: 65%;
-    --resume-right: 35%;
+    --resume-left: 75%;
+    --resume-right: 25%;
 
     --link-color: #2079c7;
 
@@ -60,7 +60,7 @@ ul {
 }
 
 ol li, ul li {
-    margin: 4em 0;
+    margin: 10vh 0;
 }
 
 ul li {
@@ -244,6 +244,11 @@ span.bold {
     font-family: Merriweather, serif;
     margin-top: 64px;
     opacity: 0.5;
+}
+
+#email {
+    word-break: break-all;
+    min-width: 100px;
 }
 
 #email.unloaded {

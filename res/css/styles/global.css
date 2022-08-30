@@ -9,11 +9,8 @@
 
     --link-color: #2079c7;
 
-    --header-background: rgba(255, 255, 255, 0.7);
-    --dark-header-background: rgba(0, 0, 0, 0.7);
-
-    --cover-background: rgba(255, 255, 255, 0.9);
-    --dark-cover-background: rgba(0, 0, 0, 0.9);
+    --header-background: rgba(255, 255, 255, 0.9);
+    --dark-header-background: rgba(0, 0, 0, 0.9);
 
     --background: white;
     --dark-background: black;
@@ -242,10 +239,9 @@ span.bold {
 }
 
 #scroll {
-    transition: opacity 2.0s ease, margin-top 2.0s ease;
+    transition: opacity 1.0s ease, margin-top 2.0s ease;
     position: absolute;
-    text-align: center;
-    width: 100%;
+    font-family: Merriweather, serif;
     margin-top: 64px;
     opacity: 0.5;
 }
@@ -284,33 +280,6 @@ span.ws-title {
     width: 100%;
     height: var(--header-height);
     text-align: center;
-}
-
-#ws-cover {
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--cover-background);
-    color: var(--text-color);
-    cursor: pointer;
-    font-family: Cabin, sans-serif;
-    height: 100%;
-    position: fixed;
-    transition: visibility 0.5s, opacity 0.5s linear;
-    width: 100%;
-    z-index: var(--cover-layer);
-}
-
-.dark #ws-cover {
-    background-color: var(--dark-cover-background);
-    color: var(--dark-text-color);
-}
-
-#ws-cover div {
-    text-align: center;
-    font-size: 40px;
-    margin: auto;
 }
 
 #ws-hamburger {

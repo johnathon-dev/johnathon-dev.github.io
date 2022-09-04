@@ -1,16 +1,16 @@
 :root {
     --picture-size: 72px;
-    --header-layer: 1;
-    --cover-layer: 2;
+    --body-layer: 1;
+    --header-menu-layer: 2;
     --header-height: 77px;
     --menu-width: 33.33333%;
-    --resume-left: 75%;
-    --resume-right: 25%;
+    --resume-left: 65%;
+    --resume-right: 35%;
 
     --link-color: #2079c7;
 
-    --header-background: rgba(255, 255, 255, 0.9);
-    --dark-header-background: rgba(0, 0, 0, 0.9);
+    --header-background: rgba(255, 255, 255, 0.6);
+    --dark-header-background: rgba(0, 0, 0, 0.6);
 
     --background: white;
     --dark-background: black;
@@ -32,11 +32,33 @@ body {
     background-color: var(--background);
     color: var(--text-color);
     transition: background-color 1.0s ease, color 1.0s ease;
+    z-index: var(--body-layer);
 }
 
 body.dark {
     background-color: var(--dark-background);
     color: var(--dark-text-color);
+}
+
+footer {
+    bottom: -44px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: 0;
+    visibility: hidden;
+    height: 44px;
+    transition: visibility 0.5s linear, opacity 0.5s ease, background-color 1.0s ease, color 1.0s ease, bottom 1.0s ease;
+    background-color: var(--header-background);
+    margin: auto 0;
+    padding: 12px;
+}
+
+.dark footer {
+    color: var(--dark-text-color);
+    background-color: var(--dark-header-background);
 }
 
 .home, .collection {
@@ -57,6 +79,10 @@ ol, ul {
 
 ul {
     text-align: left;
+}
+
+ol li {
+    overflow: hidden;
 }
 
 ol li, ul li {
@@ -80,6 +106,7 @@ ol li a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 20px;
+    transition: color 1.0s ease;
 }
 
 .dark ol li a {
@@ -95,7 +122,7 @@ header {
     margin: 0 auto;
     text-align: center;
     position: sticky;
-    z-index: var(--header-layer);
+    z-index: var(--header-menu-layer);
     height: var(--header-height);
     transition: background-color 1.0s ease, color 1.0s ease;
     background-color: var(--header-background);
@@ -115,11 +142,9 @@ header:not(.sticky), header:not(.sticky) + #ws-menu {
 }
 
 main {
-    padding: 48px 0;
-    position: absolute;
+    padding-top: 77px;
     top: 0;
     width: 100%;
-    margin-top: var(--header-height);
     font-family: Open Sans, sans-serif;
     overflow: hidden;
 }
@@ -309,7 +334,7 @@ span.ws-title {
 
 #ws-menu {
     backdrop-filter: blur(12px);
-    transition: visibility 0.5s linear, opacity 0.5s linear, background-color 1.0s ease, left 1.0s ease;
+    transition: background-color 1.0s ease, visibility 0.5s linear, opacity 0.5s linear, left 1.0s ease;
     background-color: var(--header-background);
     color: var(--text-color);
     position: fixed;
@@ -318,7 +343,7 @@ span.ws-title {
     opacity: 0;
     visibility: hidden;
     top: var(--header-height);
-    z-index: var(--header-layer);
+    z-index: var(--header-menu-layer);
     left: calc(var(--menu-width) * -1);
 }
 
@@ -334,6 +359,21 @@ span.ws-title {
 
 main a:link, main a:visited {
     color: var(--link-color);
+}
+
+.error-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    transition: filter 1.0s ease, opacity 0s;
+    opacity: 0.1;
+    filter: invert(1);
+}
+
+.dark .error-background {
+    filter: invert(0);
 }
 
 @media only screen and (max-width: 500px) {

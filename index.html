@@ -15,6 +15,7 @@
         <meta content="" property="og:image"/>
 
         <link href="/res/css/styles/global.css" rel="stylesheet">
+        <link href="/res/css/styles/home.css" rel="stylesheet">
         <link href="/res/css/font-awesome.min.css" rel="stylesheet">
         <link href="/images/favicon.png" rel="shortcut icon">
         <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -22,7 +23,7 @@
     </head>
 
     <body class="pre">
-        <header id="ws-header">
+        <header id="ws-header" class="sticky">
             <div id="ws-hamburger">
                 <svg class="svg" width="99px" height="77px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 77">
                     <g id="rect1"><rect rx="0" stroke-width="0" height="3%" width="100%" y="30%" x="0"/></g>
@@ -47,20 +48,55 @@
                 <li><a href="/collection">Collection</a></li>
             </ol>
         </div>
+
         <main>
             <article>
                 <section>
                     <div class="home">
-                        Home
+                        <div class="page">
+                            <div class="page-container" id="page-one">
+                                <div class="label-wrapper">
+                                    <div class="label">
+                                        <h1>Johnathon Skidmore</h1>
+                                    </div>
+                                </div>
+                                <h2>Developer, Designer, Technician</h2>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="page-container" data-color="rgba(32, 121, 199, 1)" id="page-two">
+                                <h1>View <a href="/resume">resume</a></h1>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <div class="page-container" data-color="rgba(32, 121, 199, 1)" id="page-three">
+                                <h1>View <a href="/collection">collection</a></h1>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </article>
+            <footer>2022</footer>
         </main>
     </body>
 
-    <script src="/res/js/reveal.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onscroll = function() {
+            const footer = document.querySelector('footer');
+            if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.style.visibility = 'visible';
+                footer.style.opacity = '1';
+                footer.style.bottom = '0px';
+            } else {
+                footer.style.visibility = 'hidden';
+                footer.style.opacity = '0';
+                footer.style.bottom = '-44px';
+            }
+        };
+    </script>
+
+    <script src="/res/js/reveal-labels.js" type="text/javascript"></script>
+    <script src="/res/js/color-background.js" type="text/javascript"></script>
     <script src="/res/js/dark-mode.js" type="text/javascript"></script>
     <script src="/res/js/hamburger-menu.js" type="text/javascript"></script>
-    <script src="/res/js/load-email.js" type="text/javascript"></script>
-    <script src="/res/js/scroll.js" type="text/javascript"></script>
 </html>

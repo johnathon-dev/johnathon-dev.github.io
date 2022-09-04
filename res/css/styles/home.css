@@ -1,0 +1,65 @@
+.home h1 {
+    padding: 0;
+    font-size: max(6vw, 42px);
+}
+
+.home h2 {
+    font-weight: normal;
+    font-size: max(4vw, 28px);
+}
+
+.home p {
+    margin-top: 1em;
+    font-size: max(2vw, 16px);
+}
+
+.page a {
+    transition: color 1.0s ease;
+    color: var(--text-color) !important;
+}
+
+.dark .page a {
+    color: var(--dark-text-color) !important;
+}
+
+.page {
+    min-height: calc(100vh - 77px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    margin: auto 0;
+}
+
+#page-one {
+    background: none;
+    margin: auto 0;
+}
+
+#page-two {
+
+}
+
+#page-three {
+
+}
+
+.label {
+    width: auto;
+    opacity: 0;
+    transform: scale(1.2);
+    margin: auto;
+}
+
+.label-transition {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .label {
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+}

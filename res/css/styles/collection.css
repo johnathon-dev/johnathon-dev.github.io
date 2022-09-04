@@ -1,0 +1,41 @@
+.collection h1 {
+    margin-bottom: 1em;
+    font-size: 72px;
+}
+
+.collection img {
+    cursor: pointer;
+}
+
+.collection .item {
+    width: auto;
+    height: auto;
+    max-width: 320px;
+    display: inline-block;
+    margin-bottom: 3em;
+}
+
+.collection span.item-title {
+    font-size: 24px;
+}
+
+.collection span.item-author {
+    font-size: 14px;
+}
+
+.item-display {
+    background: url(/images/unknown.png) left 0 center;
+    background-size: cover !important;
+    aspect-ratio: 1;
+    height: auto;
+    width: min(min(1000px, max(calc(100vh), 500px)), 100vw);
+    margin: auto;
+}
+
+#red-baby-ring {
+    background: url(/images/items/drain-gang-red-baby-ring/image.png) left 0 center;
+}
+
+#teamsesh-buckshot-ring {
+    background: url(/images/items/teamsesh-buckshot-ring/image.png) left 0 center;
+}

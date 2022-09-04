@@ -1,11 +1,11 @@
 .home h1 {
     padding: 0;
-    font-size: max(6vw, 42px);
+    font-size: max(min(6vw, 72px), 42px);
 }
 
 .home h2 {
     font-weight: normal;
-    font-size: max(4vw, 28px);
+    font-size: max(min(4vw, 48px), 28px);
 }
 
 .home p {
@@ -48,8 +48,6 @@
 }
 
 .label {
-    width: auto;
-    opacity: 0;
     transform: scale(1.2);
     margin: auto;
 }
@@ -61,6 +59,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .label {
-        transition: opacity 1.5s ease, transform 1.5s ease;
+        transition: opacity 2.0s ease, transform 2.0s ease;
     }
 }
